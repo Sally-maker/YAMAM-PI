@@ -1,64 +1,76 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+
 .content section {
-    position: absolute;
-    bottom: 670px;
-    right: 740px;
-     
+    position: relative;
+    padding: 20px;
 }
 
 header {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
+
 button {
-    position: fixed;
-    right:  85vh;
-    bottom: 92vh;
     border-radius: 10px;
     width: 100px;
     height: 54px;
-    
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.barraPesquisa input{
-    position: fixed;
-    left: 90vh;
-    bottom: 92vh;
-    
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.barraPesquisa input {
     border-radius: 10px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
-.barraPesquisa a{
+
+.barraPesquisa a {
     text-decoration: none;
-    position: absolute;
+    position: relative;
     top: 10vh;
     left: -10vh;
 }
 
 .barraPesquisa p {
-    margin-left: 900px;
+    text-align: center;
+    position: relative;
+    bottom:  90px;
+    left: 130px;
 }
 
-.barraPesquisa p:hover{
-    background: rgb(0, 0, 0) 1px;
-    width: 190px;
+.barraPesquisa p:hover {
     color: rgb(255, 0, 0);
-    text-decoration: none;
 }
+
 
 table {
-    position: fixed;
-    left: 20vh;
+    margin: 20px auto;
     width: 80%;
     border-collapse: collapse;
-    /* margin-right: 30vb; */
 }
 
 table thead tr {
@@ -70,22 +82,20 @@ table thead tr th {
     padding-bottom: 10px;
     text-transform: uppercase;
     color: #666;
-    
-    
 }
 
 table tbody tr {
     border-bottom: 3px solid #ff0000;
-
 }
 
 table tbody tr:last-child {
-    border: 0;
+    border: none;
 }
 
 table tbody tr {
     padding: 30px 0;
 }
+
 
 table thead tr th a {
     text-decoration: none;
@@ -93,3 +103,61 @@ table thead tr th a {
 }
 
 
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barraPesquisa input {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    table {
+        width: 90%;
+    }
+
+    button {
+        width: 80px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .barraPesquisa input {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    table thead tr th, table tbody tr {
+        font-size: 14px;
+    }
+
+    button {
+        width: 70px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        align-items: center;
+        padding: 10px;
+    }
+
+    .barraPesquisa input {
+        max-width: 200px;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    button {
+        width: 60px;
+        height: 35px;
+    }
+}
