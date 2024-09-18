@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 9;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y5NDQtYmItMTYtam9iNTk4LmpwZw.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    margin: auto;
+}
+
+.container{
+    max-width: 3900px;
+    margin: 0 4%;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 100px;
+    align-items: center;
+    margin-bottom: 170px;
+    margin-left: 50px;
+}
+
+nav .imageLogo img{
+    position: absolute;
+    bottom: 62%;
+    width: 20%;
+}
+
+
+nav .pesquisarCampo  {
+    display: block;
+    position: absolute;
+    left:  40%;
+    top: 10vh;
+}
+
+nav .pesquisarCampo input{
+    border-radius: 100px;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    margin-left: 80px;
+}
+
+nav .pesquisarCampo i {
+   /* display: block; */
+   position: flex;
+   position: relative; 
+   left: 18%;
+}
+
+nav .menu-icon{
+    display: flex;
+    flex-direction: column;
+}
+
+nav .menu-icon h4{
+    display: block;
+    position: relative;
+    font-weight: 3900;
+    top: 10vh;
+    right: 20vh;
+}
+
+nav .menu-icon i  {
+    display: block;
+    position: relative;
+    bottom: 4.1vh;
+    top: 9vh;
+    right: 19vh;
+}
+
+nav .menu-icon ul li{
+    position: relative;
+    top: 4.1vh;
+    right: 80%;
+    list-style: none;
+}
+
+.container .botaoAdicionar{
+   display: block;
+    position: relative;
+    margin-left: 160px;
+}
+
+.container .botaoAdicionar > button {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container .botaoAdicionar > button:hover{
+    background-color: aqua;
+}
+
+.container  section table {
+    position: relative;
+    margin-left: 180px;
+    margin-top: 30px;
+}
+
+.container section table thead tr th{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 980px){
+    nav{
+        height: 200px;
+    }
+
+    nav .imageLogo img{
+        position: relative;
+        top: 40px;
+        bottom: 20vh;
+        width: 300%;
+    }
+
+    nav .pesquisarCampo{
+        position: relative;
+        left: 10%;
+    }
+
+    nav .pesquisarCampo input{
+        position: relative;
+        height: 40px;
+        top: 90px;
+
+    }
+
+}
