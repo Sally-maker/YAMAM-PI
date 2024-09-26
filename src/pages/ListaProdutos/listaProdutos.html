@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="listaProdutos.css">
+    <title>Lista de Produtos</title>
+</head>
+
+<body onload="getData()">
+    <div class="container">
+        <h1>Lista de Produtos</h1>
+
+        <!-- Tabela de Usuários -->
+        <table id="tb_products" >
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+ 
+                    <th>Classificação</th>
+                    <th>Valor</th>
+                    <th>Estoque</th>
+                    <th>Status</th>
+                    <th>Hab/Des</th>
+                    <th>Alterar</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                
+            </tbody>
+        </table>
+
+        <a href="../TelaCadastroProduto/CadastroProduto.html" class="button">Cadastrar Novo Produto</a>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

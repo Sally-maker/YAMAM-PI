@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="TelaCadastroProduto.css">
+
+    <title>Cadastro de listar_produtos</title>
+</head>
+<body>
+    <script src="TelaCadastroProduto.js"></script>
+    <div class="container">
+        <div class="formulario">
+            <form action="/produtos" method="post" enctype="multipart/form-data">
+                <label for="nome">Nome do Produto:</label><br>
+                <input type="text" id="nomeProduto" name="nome" maxlength="200" required><br>
+    
+                <label for="preco">Preço:</label><br>
+                <input type="number" id="preco" name="preco" step="0.01" required><br>
+    
+                <label for="qtdEstoque">Quantidade em Estoque:</label><br>
+                <input type="number" id="qtdEstoque" name="qtdEstoque" required><br>
+    
+                <label for="descricao">Descrição Detalhada:</label><br>
+                <textarea id="descricao" name="descricao" maxlength="2000" required></textarea><br>
+    
+                <label for="avaliacao">Avaliação: (1 a 5)</label><br>
+                <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" step="0.5" required><br>
+
+                <button type="button" onclick="abrirModal()">Adicionar Imagens</button><br><br>
+
+                <a href="../Home/telaPrincipal.html"><button type="button"> Cancelar</button></a>
+            </form>
+        </div>
+        <div class="imagem-principal">
+            <label for="imgPrincipalPreview">Imagem Principal:</label>
+            <div id="imgPrincipalPreview">
+                <img id="imgPrincipal" src="#" alt="Nenhuma Imagem Selecionada">
+            </div>
+        </div>
+    </div>
+    <div id="modalImagens" class="modal">
+        <h3>Galeria de Imagens:</h3>
+        <div id="etapaGaleria">
+            <input type="file" id="selecaoImagens" name="imagens" multiple accept="image/*" onchange="selecionarImagens(event)">
+            <div id="galeriaImagens"></div>
+            <button type="button" onclick="avancarParaSelecao()">Selecionar Imagem Principal</button>
+        </div>
+        <div id="etapaSelecao">
+            <h3>Escolha a imagem Principal</h3>
+            <div id="opcoesImagemPrincipal"></div>
+            <button type="button" onclick="validarCampos()">Salvar Produto</button>
+        </div>
+    </div>
+    
+</body>
+</html>

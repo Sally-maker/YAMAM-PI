@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Usuário</title>
+    <link rel="stylesheet" href="AddUser.css">
+</head>
+
+<body>
+    <div class="Form">
+
+        <h1>Adicionar novo usuário</h1>
+        <form id="userForm">
+            <div class="imagemEsquerda">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/027/749/843/small/lofi-image-for-background-generative-ai-photo.jpg"
+                    alt="">
+            </div>
+            <div class="informacoesDireita">
+                <label class="inputTexto">
+                    <h3>Nome</h3>
+                    <input type="text" name="nome" id="nome" required>
+                </label>
+                <label class="inputEmail">
+                    <h3>E-mail</h3>
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label class="inputCpf">
+                    <h3>CPF</h3>
+                    <input class="cpf" type="text" name="cpf" id="cpf" autocomplete="off" maxlength="14" required onchange="validateCPF()">
+                </label>
+                <label class="inputSenha">
+                    <h3>Senha</h3>
+                    <input type="password" name="senha" id="senha" required>
+                </label>
+                <label class="inputSenha">
+                    <h3>Confirmar senha</h3>
+                    <input type="password" name="senha" id="confirmSenha" required onchange="validatePassword()">
+                </label>
+                <div>
+                    <h3>Cargo</h3>
+                    <select name="grupo" id="grupo" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="STOCKIST">Estoquista</option>
+                    </select>
+                </div>
+                <button type="button" onclick="addUser()">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
