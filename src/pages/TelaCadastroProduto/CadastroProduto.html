@@ -30,6 +30,8 @@
                 <button type="button" onclick="abrirModal()">Adicionar Imagens</button><br><br>
 
                 <a href="../Home/telaPrincipal.html"><button type="button"> Cancelar</button></a>
+
+                <button type="button" onclick="validarCampos()">Salvar Produto</button>
             </form>
         </div>
         <div class="imagem-principal">
@@ -45,11 +47,12 @@
             <input type="file" id="selecaoImagens" name="imagens" multiple accept="image/*" onchange="selecionarImagens(event)">
             <div id="galeriaImagens"></div>
             <button type="button" onclick="avancarParaSelecao()">Selecionar Imagem Principal</button>
+
         </div>
         <div id="etapaSelecao">
             <h3>Escolha a imagem Principal</h3>
             <div id="opcoesImagemPrincipal"></div>
-            <button type="button" onclick="validarCampos()">Salvar Produto</button>
+            
         </div>
     </div>
     

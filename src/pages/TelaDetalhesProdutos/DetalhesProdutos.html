@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do produto</title>
+    <link rel="stylesheet" href="DetalhesProdutos.css">
+</head>
+<body>
+    <script src="DetalhesProdutos.js"></script>
+    <div class="produto-detalhes">
+        <h2 id="nomeProduto">Nome do Produto</h2>
+        <p id="descricao">Descrição do Produto</p>
+        <p><strong>Valor:</strong> R$<span id="valor"></span></p>
+        <p><strong>Avaliação:</strong> <span id="avalicao"></span> </p>
+
+        <div class="produto-imagens">
+            <div class="carrossel">
+                <div class="miniaturas" id="miniaturas">
+                    <!--Miniaturas das imagens -->
+                </div>
+            </div>
+            <div class="imagem-principal">
+                <!--Imagem principal-->
+                <img id="imagemSelecionada" src="" alt="Imagem principal">
+            </div>
+        </div>
+        <button id="botaoComprar">Comprar</button>
+    </div>
+</body>
+</html>

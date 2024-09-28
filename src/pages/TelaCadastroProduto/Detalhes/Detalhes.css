@@ -1,0 +1,32 @@
+.produto-detalhes {
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.produto-imagens {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carrossel {
+    width: 20%;
+}
+
+.miniaturas img {
+    width: 100px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+}
+
+.imagem-principal img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
