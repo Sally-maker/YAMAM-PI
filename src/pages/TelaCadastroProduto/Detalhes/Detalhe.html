@@ -6,13 +6,13 @@
     <title>Detalhes</title>
     <link rel="stylesheet" href="Detalhes.css">
 </head>
-<body>
+<body onload="carregarDados()">
     <script src="Detalhe.js"></script>
     <div class="produto-detalhes">
         <h2 id="nomeProduto">Nome do Produto</h2>
         <p id="descricao">Descrição do Produto</p>
-        <p><strong>Valor:</strong> R$<span id="valor"></span></p>
-        <p><strong>Avaliação:</strong> <span id="avalicao"></span> </p>
+        <p><span id="valor"></span></p>
+        <p><strong>Avaliação:</strong> <span id="avaliacao"></span> </p>
 
         <div class="produto-imagens">
             <div class="carrossel">

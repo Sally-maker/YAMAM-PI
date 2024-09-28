@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pi.yamam.domain.images.Images;
 import com.pi.yamam.domain.user.Status;
 
@@ -41,7 +42,7 @@ public class Product {
     private BigDecimal price;
 
     private int stock;
-    
+    @JsonIgnore
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Images> images;
 
