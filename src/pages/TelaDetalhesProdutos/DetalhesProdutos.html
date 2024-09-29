@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do produto</title>
     <link rel="stylesheet" href="DetalhesProdutos.css">
 </head>
-<body>
-    <script src="DetalhesProdutos.js"></script>
-    <div class="produto-detalhes">
-        <h2 id="nomeProduto">Nome do Produto</h2>
-        <p id="descricao">Descrição do Produto</p>
-        <p><strong>Valor:</strong> R$<span id="valor"></span></p>
-        <p><strong>Avaliação:</strong> <span id="avalicao"></span> </p>
 
-        <div class="produto-imagens">
-            <div class="carrossel">
-                <div class="miniaturas" id="miniaturas">
-                    <!--Miniaturas das imagens -->
+<body>
+
+    <nav>
+        <div class="imageLogo">
+            <img src="/imagens/logo.png" alt="">
+        </div>
+
+        <div class="pesquisarCampo">
+            <label for="">
+                <i class="fa fa-search"></i><input type="search" name="" id="">
+            </label>
+        </div>
+
+        <div class="menu-icon">
+            <h4>Seja Bem Vindo</h4>
+
+            <i class="fa fa-user"></i>
+            <ul>
+                <li>Usuário</li>
+            </ul>
+        </div>
+
+    </nav>
+    <main>
+        <script src="DetalhesProdutos.js"></script>
+        <div class="produto-container">
+            <div class="produto-detalhes">
+                <h2 id="nomeProduto">Nome do Produto</h2>
+                <p id="descricao">Descrição do Produto</p>
+                <p><strong>Valor:</strong> R$<span id="valor"></span></p>
+                <p><strong>Avaliação:</strong> <span id="avalicao"></span> </p>
+
+                <div class="produto-imagens">
+                    <div class="imagem-principal">
+                        <!--Imagem principal-->
+                        <img id="imagemSelecionada" src="" alt="Imagem principal">
+                    </div>
+                    <div class="carrossel">
+                        <div class="miniaturas" id="miniaturas">
+                            <!--Miniaturas das imagens -->
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="imagem-principal">
-                <!--Imagem principal-->
-                <img id="imagemSelecionada" src="" alt="Imagem principal">
+                <button class="botaoComprar" id="botaoComprar">Comprar</button>
             </div>
         </div>
-        <button id="botaoComprar">Comprar</button>
-    </div>
+    </main>
 </body>
+
 </html>
