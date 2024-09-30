@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrossel de Fotos</title>
     <link rel="stylesheet" href="Carrinho.css">
 </head>
+
 <body>
     <nav></nav>
-        <div class="imageLogo">
-            <img src="/imagens/logo.png" alt="">
-        </div>
-        <div class="pesquisarCampo">
-            <label for="">
-                <i class="fa fa-search"></i><input type="search" name="" id="">
-            </label>
-        </div>
-        <div class="menu-icon">
-            <h4>Seja Bem Vindo</h4>
-            <i class="fa fa-user"></i>
-            <ul>
-                <li>Usuário</li>
-            </ul>
-        </div>
-    </nav>
-<h1>Detalhes do Produto</h1>
-<div class="product">
-    <span>Nome do Produto</span>
-    <span>Preço: R$50.00</span>
-    <button onclick="addToCart('Produto 1', 50)">Comprar</button>
-</div>
-
-<div class="cart">
-    <h2>Carrinho de Compras</h2>
-    <div id="cartItems"></div>
-    <div class="frete-options">
-        <label for="frete">Selecione o frete:</label>
-        <select id="frete" onchange="updateSubtotal()">
-            <option value="0">Escolha o Frete</option>
-            <option value="10">Frete - R$10</option>
-            <option value="15">Frete - R$15</option>
-            <option value="20">Frete - R$20</option>
-        </select>
+    <div class="imageLogo">
+        <img src="/imagens/logo.png" alt="">
     </div>
-    <p class="total">Subtotal: R$<span id="subtotal">0</span></p>
-</div>
-<script src="Carrinho.js"></script>
+    <div class="pesquisarCampo">
+        <label for="">
+            <i class="fa fa-search"></i><input type="search" name="" id="">
+        </label>
+    </div>
+    <div class="menu-icon">
+        <h4>Seja Bem Vindo</h4>
+        <i class="fa fa-user"></i>
+        <ul>
+            <li>Usuário</li>
+        </ul>
+    </div>
+    </nav>
+    <main>
+        <h1>Detalhes do Produto</h1>
+        <div class="product">
+            <span>Nome do Produto</span>
+            <span>Preço: R$50.00</span>
+            <button class="botaoComprar" onclick="addToCart('Produto 1', 50)">Comprar</button>
+        </div>
+
+        <div class="cart">
+            <h2>Carrinho de Compras</h2>
+            <div id="cartItems"></div>
+            <div class="frete-options">
+                <label for="frete">Selecione o frete:</label>
+                <select id="frete" onchange="updateSubtotal()">
+                    <option value="0">Escolha o Frete</option>
+                    <option value="10">Frete - R$10</option>
+                    <option value="15">Frete - R$15</option>
+                    <option value="20">Frete - R$20</option>
+                </select>
+            </div>
+            <p class="total">Subtotal: R$<span id="subtotal">0</span></p>
+        </div>
+        <script src="Carrinho.js"></script>
+    </main>
 </body>
+
 </html>

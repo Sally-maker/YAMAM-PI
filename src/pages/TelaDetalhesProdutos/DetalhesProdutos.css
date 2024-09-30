@@ -119,17 +119,17 @@ body {
 }
 
 .botaoComprar {
-    padding: 15px 30px; /* Aumenta o espaço interno (padding) do botão */
-    font-size: 18px; /* Aumenta o tamanho do texto no botão */
-    border-radius: 8px; /* Suaviza as bordas do botão */
-    background-color: #0e1351; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    cursor: pointer; /* Mostra um cursor de ponteiro ao passar sobre o botão */
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #0e1351;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
 }
 
 .botaoComprar:hover {
-    background-color: #434897; /* Altera a cor do botão ao passar o mouse */
+    background-color: #434897;
 }
 

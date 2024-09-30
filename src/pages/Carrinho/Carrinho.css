@@ -2,8 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    border-color: #f4f4f4;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
     }
     
     nav {
@@ -101,9 +105,22 @@ body {
         background-color: rgb(137, 225, 245);
     }
     
-    h1 {
-        margin-top: 50px; /* Adiciona 50px de espaço acima do título */
-        text-align: center;
-        font-size: 24px;
-        color: #333;
+    nav img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+    }
+    main {
+        padding-top: 100px; /* Ajuste conforme necessário */
+    }
+
+    .botaoComprar {
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 8px;
+        background-color: #0e1351;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
