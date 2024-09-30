@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
 function buscarDetalhesProsutos(produtoId) {
     fetch('/api/produtos/${produtoId}')
         .then(reponse => response.json())
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 async function carregarDados() {
     var product = [];
-    const url = "http://localhost:8080/products/1";
+    const url = `http://localhost:8080/products/${id}`;
 
     await fetch(url)
         .then((res) => res.json())
@@ -57,7 +60,7 @@ async function carregarDados() {
 
 }
 async function carregarImagens() {
-    const url = "http://localhost:8080/images/1"
+    const url = `http://localhost:8080/images/${id}`
     var image = "";
     await fetch(url)
         .then((res) => res.json())

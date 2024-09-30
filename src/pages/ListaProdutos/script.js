@@ -29,6 +29,9 @@ const populateTable = (products) => {
         <td>
           <button disabled="true">  <a href="../AtualizarProduto/AtualizarProduto.html?id=${id}" target="_blank">Alterar Produto</a></button>
         </td>
+         <td>
+          <button disabled="true">  <a href="../TelaCadastroProduto/Detalhes/Detalhe.html?id=${id}" target="_blank">Visualizar Produto</a></button>
+        </td>
        `;
   });
 };
