@@ -75,7 +75,7 @@ public class ProductController {
         }
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/atualizarProduct/{id}")
     public ResponseEntity updateProduct(@PathVariable Long id, @RequestBody DTOProductRequest productRequest) {
         try {
             Product existingProduct = productRepository.findById(id)

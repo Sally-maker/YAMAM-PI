@@ -7,6 +7,8 @@ c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\y
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\images\Images.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\product\DTO\DTOProductRequest.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\product\DTO\DTOResponseProduct.java
+c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\product\DTO\FreteRequestDTO.java
+c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\product\FreteType.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\product\Product.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\user\DTO\AuthenticationDTO.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\user\DTO\LoginResponseDTO.java
@@ -18,6 +20,7 @@ c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\y
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\user\User.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\domain\user\UserRoles.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\infra\cors\CorsConfig.java
+c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\infra\mapperConfig\MapperConfig.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\infra\security\SecurityConfiguration.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\infra\security\SecurityFilter.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\infra\security\TokenService.java
@@ -27,6 +30,7 @@ c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\y
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\repositories\UserRepository.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\AuthorizationService.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\CustomUserDetailsService.java
+c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\FreteService.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\ImageService.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\ProductService.java
 c:\Users\Gustavo\Documents\YAMAM-PI\Teste_spring_security\src\main\java\com\pi\yamam\service\UserService.java

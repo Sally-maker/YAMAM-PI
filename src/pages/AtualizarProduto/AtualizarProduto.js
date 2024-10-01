@@ -79,12 +79,12 @@ function validarCampos() {
   if (qtdEstoque <= 0 || preco <= 0 || avaliacao <= 0) {
     alert("Campos inválidos!");
   } else {
-    salvarProduto();
+    AtualizarProduto();
   }
 }
 
-function salvarProduto() {
-  const url = `http://localhost:8080/products/${id}`;
+function AtualizarProduto() {
+  const url = `http://localhost:8080/products/atualizarProduct/${id}`;
 
   var nomeProduto = document.querySelector("#nomeProduto").value;
   var preco = document.querySelector("#preco").value;
