@@ -48,6 +48,7 @@ public class SecurityConfiguration {
                         .requestMatchers(HttpMethod.PUT, "/products/status/{id}").permitAll()
                         .requestMatchers(HttpMethod.POST, "/images/{id}").permitAll()
                         .requestMatchers(HttpMethod.GET, "/images/{id}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/images/main").permitAll()
                         
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)

@@ -1,9 +1,18 @@
+body {
+    background-color: #a61212;;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
 .produto-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     padding: 20px;
-    gap: 40px;
+    /* gap: 40px; */
+    margin: 0 auto;
 }
 
 .produto-detalhes {
@@ -13,7 +22,7 @@
 }
 
 .produto-imagens {
-    display: flex;
+     display: flex; 
     flex-direction: column;
     align-items: center;
     flex: 0 0 40%;
@@ -103,9 +112,7 @@ main {
     padding-top: 100px;
 }
 
-body {
-    background-color: #a61212;;
-}
+
 
 .carrossel {
     border: 2px solid #000;

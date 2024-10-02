@@ -44,4 +44,11 @@ public class ImageController {
         return ResponseEntity.ok("Images uploaded");
 
     }
+
+    @GetMapping("/main")
+    public ResponseEntity getMainImages(){
+
+        List<String> images = imageRepository.findMainImages();
+        return ResponseEntity.ok().body(images);
+    }
 }
