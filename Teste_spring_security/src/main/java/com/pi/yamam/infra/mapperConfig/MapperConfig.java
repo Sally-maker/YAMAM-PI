@@ -12,7 +12,7 @@ public class MapperConfig {
         ObjectMapper mapper = new ObjectMapper();
         mapper.enable(SerializationFeature.INDENT_OUTPUT);
         mapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        // Aumentando a profundidade de aninhamento
+
         mapper.setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL);
         return mapper;
     }
