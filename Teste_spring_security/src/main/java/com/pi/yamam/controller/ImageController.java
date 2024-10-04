@@ -46,9 +46,16 @@ public class ImageController {
     }
 
     @GetMapping("/main")
-    public ResponseEntity getMainImages(){
-
-        List<String> images = imageRepository.findMainImages();
-        return ResponseEntity.ok().body(images);
+    public ResponseEntity<List<String>> getMainImages() {
+        List<String> images = imageRepository.findMainImages(); // Caminhos parciais das imagens
+        String baseUrl = "http://localhost:8080/images/"; // Base da URL
+    
+        // Adiciona a baseUrl a cada imagem
+        List<String> fullImagePaths = images.stream()
+            .map(image -> baseUrl + image)
+            .toList();
+    
+        return ResponseEntity.ok().body(fullImagePaths);
     }
+    
 }

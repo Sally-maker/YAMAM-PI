@@ -9,58 +9,35 @@ function abrirModal() {
   document.getElementById("etapaSelecao").style.display = "none";
 }
 
-async function carregarProduto() {
-  const url = `http://localhost:8080/products/${id}`;
-  const nome = document.querySelector("#nomeProduto");
-  const preco = document.querySelector("#preco");
-  const estoque = document.querySelector("#qtdEstoque");
-  const descricao = document.querySelector("#descricao");
-  const avaliacao = document.querySelector("#avaliacao");
-  var produto;
-  await fetch(url, {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((resp) => (produto = resp))
-    .catch((err) => console.log(err));
+function salvarProduto() {
+  const url = "http://localhost:8080/products";
 
-  nome.value = produto.name;
-  preco.value = produto.price;
-  estoque.value = produto.stock;
-  descricao.value = produto.description;
-  avaliacao.value = produto.rating;
-}
-function selecionarImagens(event) {
-  const files = event.target.files;
-  const galeriaImagens = document.getElementById("galeriaImagens");
-  galeriaImagens.innerHTML = "";
-  imagensSelecionadas = [];
-  images = [];
+  var nomeProduto = document.querySelector("#nomeProduto").value;
+  var preco = document.querySelector("#preco").value;
+  var avaliacao = document.querySelector("#avaliacao").value;
+  var qtdEstoque = document.querySelector("#qtdEstoque").value;
+  var descricao = document.querySelector("#descricao").value;
 
-  for (let i = 0; i < files.length; i++) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      imagensSelecionadas.push(e.target.result);
-      galeriaImagens.innerHTML += `<img src="${e.target.result}" style="max-width: 150px; margin: 10px;">`;
-    };
-    images.push(files[i]);
-    reader.readAsDataURL(files[i]);
-  }
-}
-
-function avancarParaSelecao() {
-  document.getElementById("etapaGaleria").style.display = "none";
-  document.getElementById("etapaSelecao").style.display = "block";
-
-  const opcoesImagemPrincipal = document.getElementById(
-    "opcoesImagemPrincipal"
-  );
-  opcoesImagemPrincipal.innerHTML = "";
-
-  imagensSelecionadas.forEach((imagem, index) => {
-    opcoesImagemPrincipal.innerHTML += `<img src="${imagem}" style="max-width: 150px; margin: 10px; cursor: pointer;" onclick="definirImagemPrincipal(${index})">`;
+  var json = JSON.stringify({
+    name: nomeProduto,
+    description: descricao,
+    price: preco,
+    rating: avaliacao,
+    stock: qtdEstoque,
   });
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: json,
+  })
+    .then((resp) => resp.json())
+    .then((res) => uploadImagens(res)) 
+    .catch((err) => console.log(err));
 }
+
 
 function definirImagemPrincipal(index) {
   document.getElementById("imgPrincipal").src = imagensSelecionadas[index];
