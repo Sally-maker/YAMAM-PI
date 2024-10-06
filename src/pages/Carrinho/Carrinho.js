@@ -5,7 +5,7 @@ const id = urlParams.get("id");
 const NomeProduto = window.document.querySelector("#nomeProduto");
 const preco = window.document.querySelector("#preco")
 
-fetch(`http://localhost:8080/products/${id}`, {
+fetch(`http://localhost:8080/product/${id}`, {
     method: "GET",
 })
     .then((res) => res.json())
@@ -77,7 +77,7 @@ function updateCartDisplay() {
             <span>Preço: R$${item.price.toFixed(2)} x ${item.quantity}</span>
             <button onclick="updateQuantity('${item.name}', ${item.quantity - 1})">-</button>
             <button onclick="updateQuantity('${item.name}', ${item.quantity + 1})">+</button>
-            <button onclick="removeFromCart('${item.name}')">Remover</button>
+            <button class="btn-remover" onclick="removeFromCart('${item.name}')">Remover</button>
         `;
         cartItemsContainer.appendChild(productDiv);
     });

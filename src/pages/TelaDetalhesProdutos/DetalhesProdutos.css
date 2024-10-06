@@ -45,66 +45,12 @@
     max-width: 100%;
 }
 
-.imageLogo img {
-    position: absolute;
-    bottom: 62%;
-    width: 20%;
-}
-
-.pesquisarCampo {
-    display: block;
-    position: absolute;
-    left: 40%;
-    top: 10vh;
-}
-
-.pesquisarCampo input {
-    border-radius: 100px;
-    height: 30px;
-    width: 250px;
-    text-align: center;
-    margin-left: 80px;
-}
-
-.pesquisarCampo i {
-    position: relative;
-    left: 18%;
-}
-
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-icon h4 {
-    display: block;
-    position: relative;
-    font-weight: 3900;
-    top: 10vh;
-    right: 20vh;
-}
-
-.menu-icon i {
-    display: block;
-    position: relative;
-    bottom: 4.1vh;
-    top: 9vh;
-    right: 19vh;
-}
-
-.menu-icon ul li {
-    position: relative;
-    top: 4.1vh;
-    right: 80%;
-    list-style: none;
-}
-
 main {
     padding-top: 100px;
 }
 
 body {
-    background-color: rgb(137, 225, 245);
+    background-color: #a61212;
 }
 
 .carrossel {
