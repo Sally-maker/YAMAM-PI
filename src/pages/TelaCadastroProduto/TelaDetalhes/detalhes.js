@@ -15,14 +15,24 @@ fetch(`http://localhost:8080/products/${id}`, {
     return res.json();
 })
 .then((data) => {
-    console.log(data); // Verifique a estrutura dos dados
+    carregarImagens();
     NomeProduto.innerHTML = `<h2> Nome: ${data.name}</h2>`;
-    valorProduto.innerHTML = `${data.price.toFixed(2)}`; // Formata para duas casas decimais
+    valorProduto.innerHTML = `${data.price.toFixed(2)}`; 
     avaliacao.innerHTML = `<strong>Avaliação:</strong> ${data.rating} estrelas`;
     descricao.innerHTML = `<strong>Descrição: ${data.description}</strong>`;
 
 })
+async function carregarImagens() {
+    const url = `http://localhost:8080/images/product/${id}`
+    var images = [];
+    await fetch(url)
+    .then((resp) => resp.json()) 
+    .then((res) => images = res)
+    .catch((err) => console.log(err)) 
+    imagemSelecionada.src= `../../../../Teste_spring_security/src/main/resources/static/images/${images[0]}`
 
+}
 function redirecionarParaDetalhes() {
     window.location.href = "TelaDetalhes/detalhes.html";
 }
+

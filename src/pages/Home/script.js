@@ -44,24 +44,23 @@ const populateCards = async (products) => {
 
   products.map(({ id, name, price }) => {
     container.innerHTML += `
-        <div class="box">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart" onclick="addToCart('${name}', ${price})"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="../TelaCadastroProduto/Detalhes/Detalhe.html?id=${id}" target="_blank" class="fas fa-eye"></a>
+            <div class="box">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="../TelaCadastroProduto/TelaDetalhes/detalhes.html?id=${id}" target="_blank" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="../../../Teste_spring_security/src/main/resources/static/images/${images[index]}" alt="" id="imageProduct">
+                </div>
+                <div class="content">
+                    <h3>${name}</h3>
+                    <div class="price">R$ ${price} <span>R$20.99</span></div>
+                    <button type="submit">Compra</button>
+                </div>
             </div>
-             <a href="../TelaDetalhesProdutos/DetalhesProdutos.html?id=${id}" target="_blank">
-              <div class="image">
-                <img src="../../main/resources/static/images/banheiro2.jpg" alt="" id="imageProduct">
-              </div>
-            </a>
-            <div class="content">
-                <h3>${name}</h3>
-                <div class="price">R$ ${price} <span>R$20.99</span></div>
-                <button type="button" onclick="addToCart('${name}', ${price})">Comprar</button> <!-- Redireciona para o carrinho -->
-            </div>
-        </div>
     `;
+    console.log(images[index])
     index++;
   });
 };
@@ -73,6 +72,6 @@ const loadPathImages = async () => {
     .then((res) => res.json())
     .then((resp) => (images = resp))
     .catch((err) => console.log(err));
-
+  console.log(images)
   return images;
 };

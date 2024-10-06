@@ -8,6 +8,26 @@ function abrirModal() {
   document.getElementById("etapaGaleria").style.display = "block";
   document.getElementById("etapaSelecao").style.display = "none";
 }
+async function carregarProduto() {
+  const url = `http://localhost:8080/products/${id}`;
+  const nome = document.querySelector("#nomeProduto");
+  const preco = document.querySelector("#preco");
+  const estoque = document.querySelector("#qtdEstoque");
+  const descricao = document.querySelector("#descricao");
+  const avaliacao = document.querySelector("#avaliacao");
+  var produto;
+  await fetch(url, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((resp) => (produto = resp))
+    .catch((err) => console.log(err));
+  nome.value = produto.name;
+  preco.value = produto.price;
+  estoque.value = produto.stock;
+  descricao.value = produto.description;
+  avaliacao.value = produto.rating;
+}
 
 function salvarProduto() {
   const url = "http://localhost:8080/products";
@@ -34,7 +54,7 @@ function salvarProduto() {
     body: json,
   })
     .then((resp) => resp.json())
-    .then((res) => uploadImagens(res)) 
+    .then((res) => uploadImagens(res))
     .catch((err) => console.log(err));
 }
 

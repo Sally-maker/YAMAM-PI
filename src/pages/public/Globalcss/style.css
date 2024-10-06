@@ -5,7 +5,9 @@
     --border: .1rem solid rgba(56, 50, 50, 0.185);
     
 }
-
+a{
+    text-decoration: none;
+}
 section{
     padding:11rem 7%;
     padding-left: 7%;
