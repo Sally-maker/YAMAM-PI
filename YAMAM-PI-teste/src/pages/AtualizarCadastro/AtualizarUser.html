@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar User</title>
+    <link rel="stylesheet" href="AtualizarUser.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../public/Globalcss/style.css">
+</head>
+
+<body onload="getData()">
+    <script src="Main.js"></script>
+
+    <header class="header">
+        <!--Logo-->
+        <a href="../Home/index.html" class="logo">
+            <img src="../Home/7.png" alt="">
+        </a>
+
+        <!--Iniciando os icones na tela-->
+        <nav class="navbar">
+            <a href="../Home/index.html">Home</a>
+            <a href="Sobre nos/Sobre.html" target="_self">Saiba Mais</a>
+            <a href="#product" target="_self">Loja</a>
+
+        </nav>
+        <div class="icons">
+            <a href="../Login/login.html" target="_parent">
+                <div class="fas fa-user" id="user-btn"></div>
+            </a>
+        <!--Fim dos icones na tela-->
+
+    </header>
+    <!--Fim do topo header-->
+
+    <div class="Form">
+
+        <h1>Atualizar Cadastro</h1>
+        <form action="form">
+            <div class="informacoesDireita">
+                <label class="inputTexto">
+                    <h3>Nome</h3>
+                    <input type="text" name="" id="name" >
+                </label>
+
+                <label class="inputTextoCpf">
+                    <h3>CPF</h3>
+                    <input id="cpf" type="text" autocomplete="off" maxlength="14" id="cpf">
+                    <script src="Main.js"></script>
+                </label>
+                <label class="inputSenha">
+                    <h3>Senha</h3>
+                    <input type="password" name="" id="password">
+                </label>
+
+                <div class="SelectorCargo">
+                    <h3>Cargo</h3>
+                    <select name="" class="Cargo" id="group">
+                        <option selected disabled value="" >Selecione uma opção</option>
+                        <option value="ADMIN">Administrador</option>
+                        <option value="STOCKIST">Estoquista</option>
+                    </select>
+                </div>
+
+                    <button type="button" onclick="updateUser()"><strong>Atualizar dados</strong></button>
+     
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

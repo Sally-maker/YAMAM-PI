@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do produto</title>
+    <link rel="stylesheet" href="DetalhesProdutos.css">
+</head>
+<body>
+    <nav>
+        <div class="imageLogo">
+            <img src="/imagens/logo.png" alt="">
+        </div>
+    </nav>
+    <main>
+        <div class="produto-container">
+            <div class="produto-detalhes">
+                <h2 id="nomeProduto">Nome do Produto</h2>
+                <p id="descricao">Descrição do Produto</p>
+                <p><strong>Valor:</strong> R$<span id="valorProduto"></span></p>
+                <p><strong>Avaliação:</strong> <span id="avaliacao"></span></p>
+
+                <div class="produto-imagens">
+                    <div class="imagem-principal">
+                        <img id="imagemSelecionada" src="../../main/resources/static//images/banheiro2.jpg" alt="Imagem principal">
+                    </div>
+                    <div class="carrossel">
+                        <div class="miniaturas" id="miniaturas"></div>
+                    </div>
+                </div>
+                
+                <a href="../../pages/Carrinho/Carrinho.html" target="_blank" rel="noopener noreferrer">
+                    <button  class="botaoComprar" id="botaoComprar">Comprar</button>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="DetalhesProdutos.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body{
+    font-family: arial;
+    background-color: #a61212;
+}
+
+.login{
+    background-color: rgb(48, 45, 45);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    padding: 80px;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+input{
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.botao{
+    background-color: #007BFF;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.botao:hover{
+    background-color: #0056b3;
+    background-color: #0056b3;
+}

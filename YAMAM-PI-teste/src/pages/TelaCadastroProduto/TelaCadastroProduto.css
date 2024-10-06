@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a61212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    transform: translate(0, 30%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(48, 45, 45);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.1);
+    width: 80%;
+    max-width: 1000px;
+}
+
+.formulario {
+    flex: 1;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"] {
+    background-color: #0056b3;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.imagem-principal {
+    flex: 0 0 40%;
+    text-align: center;
+}
+
+#imgPrincipal {
+    max-width: 100%;
+    max-height: 300px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: none;
+}
+
+#galeriaImagens img, #opcoesImagemPrincipal img {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#galeriaImagens img:hover, #opcoesImagemPrincipal img:hover {
+    border: 2px solid #007bff;
+}
+
+#etapaSelecao {
+    display: none;
+}

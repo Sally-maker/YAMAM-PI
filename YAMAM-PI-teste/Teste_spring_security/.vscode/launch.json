@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<pi.yamam>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.pi.yamam.Application",
+            "projectName": "pi.yamam",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
