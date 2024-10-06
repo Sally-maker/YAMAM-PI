@@ -104,7 +104,7 @@ section{
 .header .search-form label{
     cursor: pointer;
     font-size: 2.2rem;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     color:var(--black);
 }
 

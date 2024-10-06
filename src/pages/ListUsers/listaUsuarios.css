@@ -5,10 +5,7 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
-=======
-    transform: translate(0, 30%);
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
+    transform: translate(0, 40%);
     background-color: #fff; /* Cor de fundo da tabela */
     padding: 20px;
     border-radius: 8px;

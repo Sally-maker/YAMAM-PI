@@ -10,10 +10,7 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
-=======
-    transform: translate(0, 30%);
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
+    transform: translate(0, 15%);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

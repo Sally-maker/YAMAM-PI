@@ -1,25 +1,26 @@
-<<<<<<< HEAD
-=======
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
     background-color: #a61212;
+    font-family: Arial, sans-serif;
+    
 }
-
-h3{
-    color: white;
-}
-
-h1{
-    color: whitesmoke;
-}
-
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
 .Form {
     display: block;
     padding: 5%;
     margin: 0 auto;
     max-width: 80%;
     margin-top: 5vh;
+}
+
+label{
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+h3{
+    color: white;
 }
 
 .Form h1 {
@@ -29,10 +30,7 @@ h1{
 }
 
 form {
-<<<<<<< HEAD
-=======
     background-color: rgb(48, 45, 45);
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     display: grid;
     border: 1px solid;
     border-radius: 10px;
@@ -43,13 +41,6 @@ form {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-}
-
-form .imagemEsquerda img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px; 
 }
 
 form .informacoesDireita {
@@ -152,8 +143,4 @@ input:checked+.slider:before {
     .informacoesDireita button {
         width: 100%;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)

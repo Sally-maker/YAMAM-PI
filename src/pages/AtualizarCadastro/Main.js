@@ -12,22 +12,14 @@ input.addEventListener("keypress", () => {
   }
 });
 
-<<<<<<< HEAD
 async function getData() {
-=======
-function getData() {
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
   
   const url = `http://localhost:8080/user/${id}`;
   const name = document.querySelector("#name");
   const cpf = document.querySelector("#cpf");
   const password = document.querySelector("#password");
 
-<<<<<<< HEAD
    fetch(url)
-=======
-  fetch(url)
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     .then((res) => res.json())
     .then((response) => {
       name.value = response.name;
