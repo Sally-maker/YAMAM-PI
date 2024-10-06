@@ -10,15 +10,27 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
+=======
+    transform: translate(0, 30%);
+>>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: rgb(48, 45, 45);
+<<<<<<< HEAD
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.1);
     width: 80%;
     max-width: 1000px;
+=======
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1.1);
+    width: 80%;
+    max-width: 900px;
+>>>>>>> a48de40 (adicionado barra de navegacao nas telas)
 }
 
 .formulario {

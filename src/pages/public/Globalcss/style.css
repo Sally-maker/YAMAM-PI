@@ -1,38 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 :root {
-<<<<<<< HEAD
-    --main-color: #7c7ddf;
-    --black: #000000;
-    --bg: rgba(137, 225, 245);
-=======
     --main-color: #ffffff;
     --black: #000000;
-    --bg: #a61212;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
-    --border: .1rem solid rgba(0, 0, 0, 0.3);
+    --bg: rgba(137, 225, 245);
+    --border: .1rem solid rgba(56, 50, 50, 0.185);
     
-}
-
-*{
-    font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none; border:none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-}
-
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 9rem;
-    scroll-behavior: smooth;
-}
-
-body{
-    background: var(--bg);
 }
 
 section{
@@ -61,26 +32,18 @@ section{
     justify-content: space-between;
     padding:1.5rem 7%;
     border-bottom: var(--border);
-<<<<<<< HEAD
-    position: fixed;
-=======
     position: absolute;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     top:0; left: 0; right: 0;
     z-index: 1000;
 }
 
 .header .logo img{
-<<<<<<< HEAD
-    height: 10rem;
-=======
-    height: 6rem;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
+    height: 3rem;
 }
 
 .header .navbar a{
     margin:0 1rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color:#fff;
 }
 
@@ -93,12 +56,8 @@ section{
 .header .icons div{
     color:#fff;
     cursor: pointer;
-<<<<<<< HEAD
-    font-size: 2.5rem;
-=======
     font-size: 1.5rem;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
-    margin-left: 2rem;
+    margin-left: 0.2rem;
 }
 
 .header .icons div:hover{
@@ -109,7 +68,7 @@ section{
     position: absolute;
     top:115%; right: 7%;
     background: #fff;
-    width: 50rem;
+    width: 30rem;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -121,13 +80,8 @@ section{
     position: absolute;
     top:30%; right: 19%;
     background: #fff;
-<<<<<<< HEAD
     width: 30rem;
     height: 5rem;
-=======
-    width: 25rem;
-    height: 3rem;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     display: flex;
     align-items: center;
     transform: scaleX(0);
@@ -219,7 +173,6 @@ section{
     top: 15px;
 }
 
-/* Produtos da loja */
 .produtos .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -263,11 +216,7 @@ section{
 }
 
 .produtos .box-container .box .content .price{
-<<<<<<< HEAD
-    color:#fe0101;
-=======
     color:#ffffff;
->>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     font-size: 2.5rem;
 }
 
@@ -297,7 +246,6 @@ section{
     font-size: 4rem;
 }
 
-/* Responsividade */
 @media (max-width: 1024px) {
     
     header {
@@ -319,28 +267,5 @@ section{
     .header .search-form {
         width: 40rem;
         height: 4rem;
-    }
-
-    .header .cart-items-container {
-        width: 30rem;
-    }
-
-    .produtos .box-container {
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    }
-
-    .produtos .box-container .box .icons a {
-        height: 4rem;
-        width: 4rem;
-        line-height: 4rem;
-        font-size: 1.5rem;
-    }
-
-    .produtos .box-container .box .content h3 {
-        font-size: 2rem;
-    }
-
-    .produtos .box-container .box .content .price {
-        font-size: 2rem;
     }
 }

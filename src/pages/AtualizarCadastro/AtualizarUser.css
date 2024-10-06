@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #a61212;
+}
+
+h3{
+    color: white;
+}
+
+h1{
+    color: whitesmoke;
+}
+
+>>>>>>> a48de40 (adicionado barra de navegacao nas telas)
 .Form {
     display: block;
     padding: 5%;
@@ -13,6 +29,10 @@
 }
 
 form {
+<<<<<<< HEAD
+=======
+    background-color: rgb(48, 45, 45);
+>>>>>>> a48de40 (adicionado barra de navegacao nas telas)
     display: grid;
     border: 1px solid;
     border-radius: 10px;
@@ -132,4 +152,8 @@ input:checked+.slider:before {
     .informacoesDireita button {
         width: 100%;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a48de40 (adicionado barra de navegacao nas telas)
