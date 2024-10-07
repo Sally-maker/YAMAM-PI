@@ -41,18 +41,17 @@ const populateCards = async (products) => {
   var images = [];
   const pathImages = await loadPathImages().then((res) => (images = res));
   let index = 0;
-
+  console.log(pathImages)
   products.map(({ id, name, price }) => {
-  
     container.innerHTML += `
             <div class="box">
                 <div class="icons">
                     <a href="#" class="fas fa-shopping-cart"></a>
                     <a href="#" class="fas fa-heart"></a>
-                    <a href="../TelaCadastroProduto/Detalhes/Detalhe.html?id=${id}" target="_blank" class="fas fa-eye"></a>
+                    <a href="../TelaDetalhesProdutos/DetalhesProdutos.html?id=${id}" target="_blank" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="../../../../Teste_spring_security/src/main/resources/static/images/${images[index]}" alt="" id="imageProduct">
+                    <img src="../../../Teste_spring_security/src/main/resources/static/images/${images[index]}" alt="" id="imageProduct">
                 </div>
                 <div class="content">
                     <h3>${name}</h3>
@@ -60,8 +59,8 @@ const populateCards = async (products) => {
                     <button type="submit">Compra</button>
                 </div>
             </div>
-    
     `;
+
     index++;
   });
 };
@@ -73,6 +72,5 @@ const loadPathImages = async () => {
     .then((res) => res.json())
     .then((resp) => (images = resp))
     .catch((err) => console.log(err));
-
   return images;
 };

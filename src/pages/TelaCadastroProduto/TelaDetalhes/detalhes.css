@@ -1,0 +1,139 @@
+body{
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.produto-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 40px;
+}
+
+.produto-detalhes {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.produto-imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 40%;
+    margin-left: 50%;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 10px;
+}
+
+.miniaturas img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.miniaturas img:hover {
+    border-color: #000;
+}
+
+.imagem-principal img {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.imageLogo img {
+    position: absolute;
+    bottom: 62%;
+    width: 20%;
+}
+
+.pesquisarCampo {
+    display: block;
+    position: absolute;
+    left: 40%;
+    top: 10vh;
+}
+
+.pesquisarCampo input {
+    border-radius: 100px;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    margin-left: 80px;
+}
+
+.pesquisarCampo i {
+    position: relative;
+    left: 18%;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icon h4 {
+    display: block;
+    position: relative;
+    font-weight: 3900;
+    top: 10vh;
+    right: 20vh;
+}
+
+.menu-icon i {
+    display: block;
+    position: relative;
+    bottom: 4.1vh;
+    top: 9vh;
+    right: 19vh;
+}
+
+.menu-icon ul li {
+    position: relative;
+    top: 4.1vh;
+    right: 80%;
+    list-style: none;
+}
+
+main {
+    padding-top: 100px;
+}
+
+body {
+    background-color: #a61212;;
+}
+
+.carrossel {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.botaoComprar {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #0e1351;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.botaoComprar:hover {
+    background-color: #434897;
+}

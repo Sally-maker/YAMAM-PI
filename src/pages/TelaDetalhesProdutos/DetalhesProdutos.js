@@ -1,68 +1,48 @@
-function buscarDetalhesProsutos(produtoId) {
-    fetch('/api/produtos/${produtoId}')
-    .then(reponse => response.json())
-    then(produto => {
-        document.getElementById('nomeProduto').textContent = produto.nome;
-        document.getElementById('desricao').textContent = produto.descricao;
-        document.getElementById('valor').textContent = produto.valor.toFixed(2);
-        document.getElementById('avaliacao').textContent = produto.avaliacao;
-        //Exibir imagem padão
-        if(produto.imagem.length > 0) {
-            document.getElementById('imagemSelecionada').src = produto.imagens[0];
-        }
-        //imagens carrossel
-        const miniaturaDiv = document.getElementById('miniaturas');
-        miniaturaDiv.innerHTML = '';
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
 
-        produto.imagens.forEach(imagem => {
-            const imgElement = document.createElement('img');
-            imgElement.src = imagem;
-            imgElement.style.width = '100px';
-            imgElement.style.margin = '5px';
-            imgElement.style.cursor = 'pointer';
-            imgElement.onclick = () => mostrarImagemMaior(imagem);
-            miniaturaDiv.appendChild(imgElement);
-        });
+const NomeProduto = document.querySelector("#nomeProduto");
+const valorProduto = document.querySelector("#valorProduto");
+const avaliacao = document.querySelector("#avaliacao");
+const descricao = document.querySelector("#descricao");
+const imagemSelecionada = document.querySelector("#imagemSelecionada");
+const miniaturas = document.querySelector("#miniaturas");
+
+function loadData() {
+  fetch(`http://localhost:8080/products/${id}`, {
+    method: "GET",
+  })
+    .then((res) => {
+      return res.json();
     })
-    .catch(error => console.error('Erro ao buscar detalhes do produto:', error));
+    .then((data) => {
+      carregarImagens();
+      NomeProduto.innerHTML = `<h2> Nome: ${data.name}</h2>`;
+      valorProduto.innerHTML = `${data.price.toFixed(2)}`; // Formata para duas casas decimais
+      avaliacao.innerHTML = `<strong>Avaliação:</strong> ${data.rating} estrelas`;
+      descricao.innerHTML = `<strong>Descrição: ${data.description}</strong>`;
+    });
 }
-//exibir imagem maior
-function mostrarImagemMaior(imagemSrc) {
-    const imagemPrincipal = document.getElementById('imagemSelecionada');
-    imagemPrincipal.src = imagemSrc;
-}
-//função carregar pagina
-document.addEventListener('DOMContentLoaded', () => {
-    const produtoId = 1;
-    buscarDetalhesProsutos(produtoId);
-})
 
-document.getElementById('botaoComprar').addEventListener('click', function() {
-    const produtoId = /* pegue o ID do produto dinamicamente */;
-    
-    fetch(`/carrinho/adicionar`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-            'produtoId': produtoId
-        })
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert('Produto adicionado ao carrinho!');
-        exibirOpcoes();
-    })
-    .catch(error => console.error('Erro ao adicionar ao carrinho:', error));
-});
+async function carregarImagens() {
+  const url = `http://localhost:8080/images/product/${id}`;
+  const carrosel = document.querySelector("#miniaturas");
+  var images = [];
+  await fetch(url)
+    .then((resp) => resp.json())
+    .then((res) => (images = res))
+    .catch((err) => console.log(err));
 
-function exibirOpcoes() {
-    if (confirm('Deseja continuar comprando?')) {
-        // Redirecionar para a página inicial ou lista de produtos
-        window.location.href = '/produtos';
-    } else {
-        // Redirecionar para a página do carrinho
-        window.location.href = '/carrinho';
-    }
+ 
+  images.map((index) =>{
+    const img = document.createElement("img")
+    imagemSelecionada.src = `../../../Teste_spring_security/src/main/resources/static/images/${images[0]}`;
+    img.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`
+    img.classList.add("miniatura-img")
+    img.addEventListener('click', () =>{
+        imagemSelecionada.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`
+    })
+    carrosel.appendChild(img)
+
+  })
 }

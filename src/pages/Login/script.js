@@ -21,7 +21,7 @@ const fetchAPI = async() => {
         alert("Usuário logado");
         localStorage.setItem("token", res.token)
         localStorage.setItem("role", res.role)
-        window.location.replace("../Home/Admin/telaPrincipal.html");
+        window.location.replace("../home-admin/telaPrincipal.html");
       })
       .catch((err) => alert("Login incorreto!"));
   };

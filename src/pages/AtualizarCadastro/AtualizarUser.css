@@ -1,9 +1,26 @@
+body {
+    background-color: #a61212;
+    font-family: Arial, sans-serif;
+    
+}
 .Form {
     display: block;
     padding: 5%;
     margin: 0 auto;
     max-width: 80%;
     margin-top: 5vh;
+}
+
+label{
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+h3{
+    color: white;
 }
 
 .Form h1 {
@@ -13,6 +30,7 @@
 }
 
 form {
+    background-color: rgb(48, 45, 45);
     display: grid;
     border: 1px solid;
     border-radius: 10px;
@@ -23,13 +41,6 @@ form {
     padding: 20px;
     box-sizing: border-box;
     position: relative;
-}
-
-form .imagemEsquerda img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px; 
 }
 
 form .informacoesDireita {

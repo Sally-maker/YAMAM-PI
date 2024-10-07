@@ -33,22 +33,29 @@ public class ImageController {
     private ImageService imageService;
 
     @GetMapping("/{id}")
-    public Images getImages(@PathVariable Long id){
+    public Images getImages(@PathVariable Long id) {
         return imageRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Image not found"));
 
     }
+
     @PostMapping("/{id}")
-    public ResponseEntity<String> uploadImages(@RequestParam("img") List<MultipartFile> files, @PathVariable Long id ) {
-    
-        imageService.uploadImages(files,id );
+    public ResponseEntity<String> uploadImages(@RequestParam("img") List<MultipartFile> files, @PathVariable Long id) {
+
+        imageService.uploadImages(files, id);
         return ResponseEntity.ok("Images uploaded");
 
     }
 
     @GetMapping("/main")
-    public ResponseEntity getMainImages(){
-
-        List<String> images = imageRepository.findMainImages();
+    public ResponseEntity<List<String>> getMainImages() {
+        List<String> images = imageRepository.findMainImages(); // Caminhos parciais das imagens
         return ResponseEntity.ok().body(images);
     }
+
+    @GetMapping("/product/{id}")
+    public ResponseEntity<List<String>> getProductImages(@PathVariable Long id) {
+        List<String> images = imageRepository.findImagesProduct(id);
+        return ResponseEntity.ok().body(images);
+    }
+
 }
