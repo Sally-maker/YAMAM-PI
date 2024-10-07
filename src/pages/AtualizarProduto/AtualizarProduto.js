@@ -128,3 +128,17 @@ async function uploadImagens(produto) {
       console.log("Erro ao enviar imagens:", err);
     });
 }
+
+function avancarParaSelecao() {
+  document.getElementById("etapaGaleria").style.display = "none";
+  document.getElementById("etapaSelecao").style.display = "block";
+
+  const opcoesImagemPrincipal = document.getElementById(
+    "opcoesImagemPrincipal"
+  );
+  opcoesImagemPrincipal.innerHTML = "";
+
+  imagensSelecionadas.forEach((imagem, index) => {
+    opcoesImagemPrincipal.innerHTML += `<img src="${imagem}" style="max-width: 150px; margin: 10px; cursor: pointer;" onclick="definirImagemPrincipal(${index})">`;
+  });
+}

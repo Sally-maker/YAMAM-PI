@@ -39,28 +39,30 @@ window.onscroll = () => {
 const populateCards = async (products) => {
   const container = document.querySelector(".box-container");
   var images = [];
-  const pathImages = await loadPathImages().then((res) => (images = res));
+  const pathImages = await loadPathImages();
   let index = 0;
   console.log(pathImages)
   products.map(({ id, name, price }) => {
-    container.innerHTML += `
-            <div class="box">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="../TelaDetalhesProdutos/DetalhesProdutos.html?id=${id}" target="_blank" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="../../../Teste_spring_security/src/main/resources/static/images/${images[index]}" alt="" id="imageProduct">
-                </div>
-                <div class="content">
-                    <h3>${name}</h3>
-                    <div class="price">R$ ${price} <span>R$20.99</span></div>
-                    <button type="submit">Compra</button>
-                </div>
-            </div>
-    `;
+    console.log(pathImages[index])
 
+    container.innerHTML += `
+      <div class="box">
+          <div class="icons">
+              <a href="#" class="fas fa-shopping-cart"></a>
+              <a href="#" class="fas fa-heart"></a>
+              <a href="../TelaDetalhesProdutos/DetalhesProdutos.html?id=${id}" target="_blank" class="fas fa-eye"></a>
+          </div>
+          <div class="image">
+              <img src="../../../Teste_spring_security/src/main/resources/static/images/${pathImages[index]}" alt="" id="imageProduct">
+          </div>
+          <div class="content">
+              <h3>${name}</h3>
+              <div class="price">R$ ${price} <span>R$20.99</span></div>
+              <a href="../TelaDetalhesProdutos/DetalhesProdutos.html?id=${id}"><button type="submit">Compra</button></a>
+          </div>
+      </div>
+    `;
+    
     index++;
   });
 };
