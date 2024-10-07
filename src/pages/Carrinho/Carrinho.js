@@ -5,7 +5,7 @@ const id = urlParams.get("id");
 const NomeProduto = window.document.querySelector("#nomeProduto");
 const preco = window.document.querySelector("#preco");
 
-fetch(`http://localhost:8080/product/${id}`, {
+fetch(`http://localhost:8080/products/${id}`, {
   method: "GET",
 })
   .then((res) => res.json())

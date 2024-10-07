@@ -21,6 +21,11 @@ function loadData() {
       valorProduto.innerHTML = `${data.price.toFixed(2)}`; // Formata para duas casas decimais
       avaliacao.innerHTML = `<strong>Avaliação:</strong> ${data.rating} estrelas`;
       descricao.innerHTML = `<strong>Descrição: ${data.description}</strong>`;
+
+      document.querySelector('.botaoComprar').onclick = () => {
+      window.open(`../../pages/Carrinho/Carrinho.html?id=${id}`, '_blank');
+};
+
     });
 }
 
@@ -33,16 +38,14 @@ async function carregarImagens() {
     .then((res) => (images = res))
     .catch((err) => console.log(err));
 
- 
-  images.map((index) =>{
-    const img = document.createElement("img")
+  images.map((index) => {
+    const img = document.createElement("img");
     imagemSelecionada.src = `../../../Teste_spring_security/src/main/resources/static/images/${images[0]}`;
-    img.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`
-    img.classList.add("miniatura-img")
-    img.addEventListener('click', () =>{
-        imagemSelecionada.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`
-    })
-    carrosel.appendChild(img)
-
-  })
+    img.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`;
+    img.classList.add("miniatura-img");
+    img.addEventListener("click", () => {
+      imagemSelecionada.src = `../../../Teste_spring_security/src/main/resources/static/images/${index}`;
+    });
+    carrosel.appendChild(img);
+  });
 }
