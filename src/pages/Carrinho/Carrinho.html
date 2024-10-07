@@ -61,6 +61,8 @@
             <h2>Carrinho de Compras</h2>
             <div id="cartItems"></div>
             <div class="frete-options">
+                <label for="cep">Digite o CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="Digite o CEP" oninput="checkCEP(this.value)">
                 <label for="frete">Selecione o frete:</label>
                 <select id="frete" onchange="updateSubtotal()">
                     <option value="0">Escolha o Frete</option>

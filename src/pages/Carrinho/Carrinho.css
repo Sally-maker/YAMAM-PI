@@ -24,6 +24,15 @@ body {
     .frete-options {
     margin: 10px 0;
     }
+
+    .frete-options select {
+        width: 15%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
     
     .total {
     font-weight: bold;
@@ -52,4 +61,19 @@ body {
         color: white;
         border: none;
         cursor: pointer;
+    }
+
+    .frete-options label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    
+    .frete-options input[type="text"] {
+        width: 15%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
     }

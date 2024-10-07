@@ -92,5 +92,16 @@ function updateSubtotal() {
     document.getElementById("subtotal").innerText = subtotal.toFixed(2);
 }
 
+function checkCEP(cep) {
+    // Exemplo básico de validação de CEP
+    if (cep.length === 8) {
+        console.log("CEP válido:", cep);
+        // Aqui você pode adicionar a lógica para buscar o frete com base no CEP.
+    } else {
+        console.log("CEP inválido ou incompleto");
+    }
+}
+
 // Atualiza a exibição do carrinho ao carregar a página
 updateCartDisplay();
+

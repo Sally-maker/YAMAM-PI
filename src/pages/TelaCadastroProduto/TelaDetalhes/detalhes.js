@@ -8,7 +8,7 @@ const descricao = document.querySelector("#descricao");
 const imagemSelecionada = document.querySelector("#imagemSelecionada");
 const miniaturas = document.querySelector("#miniaturas");
 
-fetch(`http://localhost:8080/products/${id}`, {
+fetch(`http://localhost:8080/product/${id}`, {
     method: "GET"
 })
 .then((res) => {
@@ -33,6 +33,6 @@ async function carregarImagens() {
 
 }
 function redirecionarParaDetalhes() {
-    window.location.href = "TelaDetalhes/detalhes.html";
+    window.location.href = "TelaDetalhesProdutos/DetalhesProdutos.html";
 }
 
