@@ -16,6 +16,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.pi.yamam.domain.client.Address.Address;
 import java.util.List;
 
@@ -41,7 +43,7 @@ public class Client {
     @Column(unique = true, length = 200)
     private String email;
 
-
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate birthDate;
 
 
@@ -52,4 +54,16 @@ public class Client {
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> address;
+
+    public Client(String name, String cpf, String email, LocalDate birthDate, Gender gender, String password){
+        this.name = name;
+        this.cpf = cpf;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.gender = gender;
+        this.password = password;
+   
+    }
+
+    
 }

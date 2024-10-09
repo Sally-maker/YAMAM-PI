@@ -33,24 +33,20 @@ public class SecurityConfiguration {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .sessionManagement(Session -> Session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorique -> authorique
-                        .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/auth/login", "/auth/register").permitAll()
                         .requestMatchers(HttpMethod.GET, "/user/all").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/user/{id}").permitAll()
-                        .requestMatchers(HttpMethod.PUT, "/user/{id}").permitAll()
-                        .requestMatchers(HttpMethod.PUT, "/user/status/{id}").permitAll()
-                        .requestMatchers(HttpMethod.PUT, "/products/atualizarProduct/{id}").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/products").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/products/{id}").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/products/teste").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/products/allProduct").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/products/{id}").permitAll()
-                        .requestMatchers(HttpMethod.PUT, "/products/status/{id}").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/images/{id}").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/images/{id}").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/images/main").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/images/product/{id}").permitAll()
-                        
+                        .requestMatchers(HttpMethod.GET, "/user/{id}", "/products/{id}", "/products/allProduct",
+                                "/images/{id}", "/images/main", "/images/product/{id}")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.PUT, "/user/{id}", "/user/status/{id}",
+                                "/products/atualizarProduct/{id}", "/products/status/{id}")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.POST, "/products", "/products/{id}", "/products/teste",
+                                "/images/{id}")
+                        .permitAll()
+                        .requestMatchers(HttpMethod.POST, "/client", "/client/login").permitAll()
+                        .requestMatchers(HttpMethod.PUT, "/client/{id}").permitAll()
+
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
