@@ -44,4 +44,17 @@ public class Address {
     @JoinColumn(name = "client_id", nullable = false)
     private Client client;
 
+    public Address(String cep, String logradouro, int number, String state, String uf, TypeAddress typeAddress,
+            Client client) {
+        this.cep = cep;
+        this.logradouro = logradouro;
+        this.number = number;
+        this.state = state;
+        this.uf = uf;
+        this.typeAddress = typeAddress;
+        this.client = client;
+    }
+
+    
+
 }
