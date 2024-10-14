@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((err) => {
       console.log(err);
       alert("Acesso negado!");
-      window.location.replace("../Home/Admin/telaPrincipal.html ")
+      window.location.replace("../home-admin/telaPrincipal.html")
     });
 });
 const populateTable = (data) => {
