@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginCliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="../public/Globalcss/style.css">
+</head>
+
+<body>
+    <script src="../script.js"></script>
+
+    <header class="header">
+        <!--Logo-->
+        <a href="../Home/index.html" class="logo">
+            <img src="../../main/resources/static/images/7.png" alt="">
+        </a>
+
+        <!--Iniciando os icones na tela-->
+        <nav class="navbar">
+            <a href="../Home/index.html" target="_self">Home</a>
+            <a href="../Home/index.html" target="_self">Loja</a>
+
+        </nav>
+        
+
+    </header>
+    <!--Fim do topo header-->
+
+
+    <div class="login">
+
+        <form>
+            <h1>Login</h1>
+
+            <label for="email"><p>Digite seu usuario de login</p></label> 
+            <input type="text" required placeholder="usuário" id="email">
+            <br><br>
+
+            <label for="senha"><p>Digite sua senha</p></label> 
+            <input type="password" required placeholder="senha" id="password">
+            <br><br>
+
+            <input type="button" class="botao" onclick="fetchAPI()" value="Enviar">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
