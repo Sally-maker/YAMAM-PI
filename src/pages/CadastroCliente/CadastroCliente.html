@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/Globalcss/style.css">
+    <link rel="stylesheet" href="CadastroCliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>CadastroCliente</title>
+</head>
+<body>
+    <header class="header">
+        <!--Logo-->
+        <a href="#" class="logo">
+            <img src="../../main/resources/static/images/7.png" alt="">
+        </a>
+
+        <!--Iniciando os icones na tela-->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <!-- <a href="#product" target="_self">Loja</a> -->
+
+        </nav>
+        <div class="icons">
+             <a href="../Login/login.html" target="_parent">
+                <div class="fas fa-user" id="user-btn"></div>
+            </a>
+            <!-- <a href="teste.html" target="_parent"> -->
+                <!-- <div class="fa-solid fa-user-tie" id="user-btn"></div>
+            </a> -->
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        </div>
+        <!--Fim dos icones na tela-->
+
+        <!--CAMPO DE BUSCA-->
+        <div class="search-form">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        <!--FIM DO CAMPO DE BUSCA-->
+
+        <!--incio de items no carrinho -->
+        <div class="cart-items-container">
+        </div>
+        <!--Fim dos items no carrinho -->
+    </header>
+
+    <div class="Form">
+        <h2>Cadastro Cliente</h2>
+        <form id="userForm" onsubmit="return addUser();">
+            <div class="informacoesDireita">
+                <label class="inputTexto">
+                    <h3>Nome Completo</h3>
+                    <input type="text" name="nome" id="nome" required>
+                </label>
+                <div class="linha-dupla">
+                <label class="inputTexto">
+                    <h3>Data de Nascimento</h3>
+                    <input type="date" name="dataNascimento" id="dataNascimento" required>
+                </label>
+                <label>
+                    <h3>Gênero</h3>
+                    <select name="genero" id="genero" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </label>
+            </div>
+                <div class="linha-dupla">
+                <label class="inputEmail">
+                    <h3>E-mail</h3>
+                    <input type="email" name="email" id="email" required>
+                </label>
+                <label class="inputCpf">
+                    <h3>CPF</h3>
+                    <input type="text" name="cpf" id="cpf" required maxlength="14">
+                </label>
+            </div>
+            <div class="linha-separadora"></div>
+                <h3>Endereço de Faturamento</h3>
+                <label class="inputCep">
+                    <h3>CEP</h3>
+                    <input type="cep" id="cep" name="cep" class="input-cep" maxlength="9" onblur="fetchAddress()">
+                </label>
+                <label>
+                    <h3>Logradouro</h3>
+                    <input type="text" id="logradouro" class="input-logradouro" required>
+                </label>
+            
+                <div class="linha-dupla">
+                <label>
+                    <h3>Número</h3>
+                    <input type="text" id="numero" required>
+                </label>
+                <label>
+                    <h3>Complemento</h3>
+                    <input type="text" id="complemento">
+                </label>
+            </div>
+            <div class="linha-dupla">
+                <label>
+                    <h3>Bairro</h3>
+                    <input type="text" id="bairro" required>
+                </label>
+                <label>
+                    <h3>Cidade</h3>
+                    <input type="text" id="cidade" required>
+                </label>
+            
+                <label>
+                    <h3>UF</h3>
+                    <input type="text" id="uf" required>
+                </label>
+            </div>
+            <div class="linha-separadora"></div>
+            <h3>Endereço de Entrega</h3>
+            <label class="inputCep">
+                <h3>CEP</h3>
+                <input type="cep" id="cep" name="cep" class="input-cep" maxlength="9" onblur="fetchAddress()">
+            </label>
+            <label>
+                <h3>Logradouro</h3>
+                <input type="text" id="logradouro" class="input-logradouro" required>
+            </label>
+        
+            <div class="linha-dupla">
+            <label>
+                <h3>Número</h3>
+                <input type="text" id="numero" required>
+            </label>
+            <label>
+                <h3>Complemento</h3>
+                <input type="text" id="complemento">
+            </label>
+        </div>
+        <div class="linha-dupla">
+            <label>
+                <h3>Bairro</h3>
+                <input type="text" id="bairro" required>
+            </label>
+            <label>
+                <h3>Cidade</h3>
+                <input type="text" id="cidade" required>
+            </label>
+        
+            <label>
+                <h3>UF</h3>
+                <input type="text" id="uf" required>
+            </label>
+        </div>
+        <div class="linha-separadora"></div>
+                <h3>Senha</h3>
+                <input type="password" name="senha" id="senha"  required>
+
+                <h3>Confirmar Senha</h3>
+                <input type="password" name="confirmSenha" id="confirmSenha" required>
+        
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
