@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 
     <header class="header">
         <!--Logo-->
@@ -36,7 +36,7 @@
     <div class="login">
 
         <form>
-            <h1>Login</h1>
+            <h1 id="title_login">Login de cliente</h1>
 
             <label for="email"><p>Digite seu usuario de login</p></label> 
             <input type="text" required placeholder="usuário" id="email">
@@ -46,7 +46,7 @@
             <input type="password" required placeholder="senha" id="password">
             <br><br>
 
-            <input type="button" class="botao" onclick="fetchAPI()" value="Enviar">
+            <input type="button" class="botao" onclick="loginUser()" value="Enviar">
         </form>
 
     </div>

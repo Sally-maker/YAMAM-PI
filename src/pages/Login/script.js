@@ -25,4 +25,3 @@ const fetchAPI = async() => {
       })
       .catch((err) => alert("Login incorreto!"));
   };
-  

@@ -1,28 +1,39 @@
-const fetchAPI = async() => {
-    var email = document.querySelector("#email").value;
-    var password = document.querySelector("#password").value;
-  
-    const json = JSON.stringify({
-      email: email,
-      password: password,
-    });
-    loginUser(json);
-  };
-  const loginUser = async(data) => {
-    const url = "http://localhost:8080/auth/login";
-  
-    await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: data,
+function loginUser() {
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+
+  if (email.length > 0 && password.length > 0) {
+    const body = JSON.stringify({
+      email,
+      password
     })
-      .then((res) => res.json())
-      .then((res) => {
-        alert("Usuário logado");
-        localStorage.setItem("token", res.token)
-        localStorage.setItem("role", res.role)
-        window.location.replace("../Home/index.html");
+
+    const url = "http://localhost:8080/client/login";
+    fetch(url, {
+      method: "POST",
+      body,
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then((resp) => {
+        console.log(resp)
+        if (resp.status == 200) {
+          alert("Usuário logado");
+          window.location.replace("../Home/index.html")
+        }
+        else {
+          alert("Usuário incorreto!");
+        }
+
       })
-      .catch((err) => alert("Login incorreto!"));
-  };
-  
+      .catch((err) => console.log(err))
+  }
+
+  else {
+    alert("Preencha todos os campos")
+  }
+
+
+
+}
