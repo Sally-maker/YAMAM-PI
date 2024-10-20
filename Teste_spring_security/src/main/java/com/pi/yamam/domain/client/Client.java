@@ -18,6 +18,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pi.yamam.domain.client.Address.Address;
 import java.util.List;
 
@@ -52,6 +53,7 @@ public class Client {
 
     private String password;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Address> address;
 

@@ -19,12 +19,17 @@ function loginUser() {
       .then((resp) => {
         console.log(resp)
         if (resp.status == 200) {
-          alert("Usuário logado");
-          window.location.replace("../Home/index.html")
+          return resp.json()
         }
         else {
           alert("Usuário incorreto!");
         }
+
+      })
+      .then((resp) => {
+        localStorage.setItem("id_client", resp);
+        alert("Usuário logado")
+        window.location.replace("../Home/index.html");
 
       })
       .catch((err) => console.log(err))

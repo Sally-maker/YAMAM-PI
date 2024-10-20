@@ -47,6 +47,8 @@ public class SecurityConfiguration {
                         .requestMatchers(HttpMethod.POST, "/client", "/client/login").permitAll()
                         .requestMatchers(HttpMethod.PUT, "/client/{id}").permitAll()
                         .requestMatchers(HttpMethod.POST, "/address/{id}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/address/{id}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/client/{id}").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
