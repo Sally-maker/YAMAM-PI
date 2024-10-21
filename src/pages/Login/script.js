@@ -22,6 +22,7 @@ const fetchAPI = async() => {
         localStorage.setItem("token", res.token)
         localStorage.setItem("role", res.role)
         window.location.replace("../home-admin/telaPrincipal.html");
+        window.open(`../../pages/Carrinho/Carrinho.html?id=${id}`, '_blank');
       })
       .catch((err) => alert("Login incorreto!"));
   };

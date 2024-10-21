@@ -52,14 +52,14 @@ public class ClientService {
         }
     }
 
-    public void updateClient(Long id, UpdateClientDTO updateClientDTO) {
+    public Client updateClient(Long id, UpdateClientDTO updateClientDTO) {
         Client client = clientRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
 
         client.setName(updateClientDTO.name());
         client.setBirthDate(updateClientDTO.birthDate());
         client.setGender(updateClientDTO.gender());
-        client.setPassword(passwordEncoder.encode(updateClientDTO.password()));
+        client.setPassword(passwordEncoder.encode(updateClientDTO.password())); // Adicione verificação se a senha é fornecida
 
-        clientRepository.save(client);
+        return clientRepository.save(client); // Retornar o cliente atualizado
     }
 }

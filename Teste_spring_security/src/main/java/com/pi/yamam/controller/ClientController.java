@@ -1,5 +1,6 @@
 package com.pi.yamam.controller;
 
+import com.pi.yamam.domain.user.User;
 import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -55,10 +56,18 @@ public class ClientController {
 
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity updateClient(@PathVariable Long id, @RequestBody UpdateClientDTO updateClientDTO){
+    @PutMapping("/altera/{id}") 
+    public ResponseEntity<?> updateClient(@PathVariable Long id, @RequestBody UpdateClientDTO updateClientDTO) {
+        try {
+            Client clientResponse = this.clientService.updateClient(id, updateClientDTO);
 
-        clientService.updateClient(id, updateClientDTO);
-        return ResponseEntity.ok("Usuário atualizado");
+            if (clientResponse == null) { 
+                return ResponseEntity.badRequest().body("ERROR while updating user");
+            }
+            return ResponseEntity.ok().body("User updated!"); 
+
+        } catch (Exception ex) {
+            return ResponseEntity.badRequest().body("Error: " + ex.getMessage()); 
+        }
     }
 }

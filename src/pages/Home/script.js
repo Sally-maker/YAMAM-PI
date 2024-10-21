@@ -1,3 +1,6 @@
+
+
+
 async function loadData() {
   var products;
   const url = "http://localhost:8080/products/allProduct";
