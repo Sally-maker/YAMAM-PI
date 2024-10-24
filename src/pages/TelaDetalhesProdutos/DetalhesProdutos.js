@@ -23,8 +23,19 @@ function loadData() {
       descricao.innerHTML = `<strong>Descrição: ${data.description}</strong>`;
 
       document.querySelector('.botaoComprar').onclick = () => {
-      window.open(`../../pages/Carrinho/Carrinho.html?id=${id}`, '_blank');
-};
+
+        const produto = {
+          id: data.id,
+          name: data.name,
+          price: data.price,
+          rating: data.rating,
+          description: data.description,
+        };
+         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+         cart.push(produto);
+         localStorage.setItem('cart', JSON.stringify(cart));
+         window.open(`../../pages/Carrinho/Carrinho.html?id=${id}`, '_blank');
+      };
 
     });
 }

@@ -36,7 +36,7 @@ function fecthUser(user) {
         .then((res) => res.json())
         .then((resp) => {
             alert("Cadastro realizado com sucesso! ")
-            window.location.replace("../LoginCliente/loginCliente.html")
+            window.location.replace("../ListaProdutos/LoginCliente/loginCliente.html")
 
         })
         .catch((err) => console.log(err))

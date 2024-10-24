@@ -11,10 +11,8 @@ fetch(`http://localhost:8080/products/${id}`, {
   .then((res) => res.json())
   .then((data) => {
     NomeProduto.textContent = data.name;
-    preco.innerHTML = `<p> Preço R$ ${data.price.toFixed(2)} </p>`;
+    preco.innerHTML = `<p> Preço R$ ${data.price.toFixed(2)} </p>`; 
 
-    console.log("Nome do Produto:", data.name); // Debug
-    console.log("Preço do Produto:", data.price); // Debug
 
     document.querySelector(".botaoComprar").onclick = () => {
       addToCart(data.name, data.price); // Adiciona ao carrinho

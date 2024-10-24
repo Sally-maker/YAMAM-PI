@@ -29,7 +29,7 @@ function loginUser() {
       .then((resp) => {
         localStorage.setItem("id_client", resp);
         alert("Usuário logado")
-        window.location.replace("../Home/index.html");
+        window.location.replace("../../Home/index.html");
 
       })
       .catch((err) => console.log(err))
